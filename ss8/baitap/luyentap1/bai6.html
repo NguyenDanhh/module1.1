@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = +prompt("Nhập vào lương của bạn ( đơn vị : triệu) ");
+    let thue;
+    if (luong > 300) {
+        thue = (20 / 100) * luong;
+    }
+    if (luong <= 300) {
+        thue = (10 / 100) * luong;
+    }
+    if (luong <= 100) {
+        thue = (10 / 100) * luong;
+    }
+    luong = luong - thue;
+    document.write("VAT : " + thue + '<br>');
+    document.write("Lương : " + luong);
+</script>
+</body>
+</html>

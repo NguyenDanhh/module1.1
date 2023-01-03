@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Nhập số n: ');
+    let e = 1;
+    let result = '';
+
+    function soNguyenTo(k) {
+        let kiemTra = true;
+        if (k < 2) {
+            kiemTra = false;
+        } else {
+            for (let i = 2; i <= k / 2; i++) {
+                if (k % i == 0) {
+                    kiemTra = false;
+                    break;
+                }
+            }
+            return kiemTra;
+        }
+    }
+
+    for (let i = 1; e <= n; i++) {
+        if (soNguyenTo(i)) {
+            result += ' ' + i.toString();
+            e += 1;
+        }
+    }
+    document.write(result);
+</script>
+
+</body>
+</html>
