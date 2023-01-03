@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = +prompt('Nhập vào chiều cao ');
+    let b = +prompt('Nhập vào chiều dài ');
+    let s = (a * b) / 2;
+    if (a > 0 && b > 0) {
+        document.write('Diện tích tam giác vuông là :' + s);
+    } else {
+        document.write('Hai cạnh phải lơn hơn 0');
+    }
+</script>
 </body>
 </html>

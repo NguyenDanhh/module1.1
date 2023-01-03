@@ -2,9 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+<h2>Chuyển đổi tiền tệ</h2>
+<table border="1px">
+    <tr>
+        <th>Amount</th>
+        <th>Fromcurrency</th>
+        <th>to currency</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="amount">
+        </td>
+        <td>
+            <select id="1">
+                <option value="VND">VND</option>
+                <option value="USA">USA</option>
+            </select>
+        </td>
+        <td>
+            <select id="2">
+                <option value="USA">USA</option>
+                <option value="VND">VND</option>
+            </select>
+
+        </td>
+        <td>
+            <button onclick="showResult()">kết quả</button>
+        </td>
+
+    </tr>
+
+
+</table>
+<script>
+    function showResult() {
+        let amount = document.getElementById("amount").value;
+        amount = parseFloat(amount)
+        let fromCurrency = document.getElementById("1");
+        let toCurrency = document.getElementById("2");
+        if (fromCurrency.value == "USA" && toCurrency.value == "VND") {
+            amount = amount * 23000;
+            alert(amount)
+
+        } else if (fromCurrency.value == "VND" && toCurrency.value == "USA") {
+            amount = amount / 23000;
+            alert(amount)
+        } else {
+            alert(amount)
+        }
+
+
+    }
+</script>
+
+
 </body>
 </html>

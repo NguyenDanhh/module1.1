@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let math = +prompt("Nhập vào điểm toán ");
+    let physic = +prompt("Nhập vào điểm vật lý");
+    let chemistry = +prompt("Nhập vào điểm hóa học ");
+    let avg = (math + physic + chemistry) / 3;
+    document.write("điểm trung bình của 3 môn là : " + avg + '<br>');
+    if (avg >= 9) {
+        document.write("học sinh được hạng A");
+    } else if (avg >= 7) {
+        document.write("học sinh được hạng B");
+    } else if (avg >= 5) {
+        document.write("học sinh được hạng C");
+    } else {
+        document.write("học sinh được hạng F");
+    }
+</script>
 </body>
 </html>

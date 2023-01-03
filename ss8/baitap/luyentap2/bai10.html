@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let chiSoMoi = +prompt("Nhập chỉ số mới");
+    let chiSoCu = +prompt("Nhập chỉ số cũ");
+    let tieuThu = chiSoMoi - chiSoCu;
+    let tien;
+    if (tieuThu <= 100) {
+        tien = tieuThu * 1000;
+    } else if (tieuThu <= 150) {
+        tien = 100 * 1000 + (tieuThu - 100) * 1200;
+    } else if (tieuThu <= 200) {
+        tien = 100 * 1000 + 50 * 1200 + (tieuThu - 150) * 2000;
+    } else if (tieuThu >= 201) {
+        tien = 100 * 1000 + 50 * 1200 + 50 * 2000 + (tieuThu - 200) * 2500;
+    }
+    document.write("Bạn tiêu thụ hết " + tieuThu + 'kWh' + '<br>');
+    document.write('Số tiền bạn phải trả là : ' + tien + 'Đ');
+</script>
 </body>
 </html>

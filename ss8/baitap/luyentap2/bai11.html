@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let luong = +prompt("Nhập vào số lương của bạn");
+    let thue;
+    if (luong >= 15000000) {
+        thue = 0.3 * luong;
+    } else if (luong >= 7000000) {
+        thue = 0.2 * luong;
+    } else if (luong < 7000000) {
+        thue = 0.1 * luong;
+    }
+    document.write("Thuế thu nhập cá nhân của bạn là : " + thue + 'Đ');
+</script>
 </body>
 </html>

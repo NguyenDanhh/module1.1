@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    alert('Lãi suất ngân hàng là 1% một tháng');
+    let money = +prompt("Nhập số tiền bạn muốn vay ");
+    let month = +prompt("Bạn muốn trả trong bao nhiêu tháng ");
+    let laiSuat = 0.1 * month;
+    let laiSuatPhaiTra = (money * laiSuat)/month;
+    document.write(laiSuatPhaiTra)
+
+
+</script>
 </body>
 </html>
