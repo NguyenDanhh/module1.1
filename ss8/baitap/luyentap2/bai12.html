@@ -6,14 +6,19 @@
 </head>
 <body>
 <script>
-    alert('Lãi suất ngân hàng là 1% một tháng');
-    let money = +prompt("Nhập số tiền bạn muốn vay ");
-    let month = +prompt("Bạn muốn trả trong bao nhiêu tháng ");
-    let laiSuat = 0.1 * month;
-    let laiSuatPhaiTra = (money * laiSuat)/month;
-    document.write(laiSuatPhaiTra)
+    let moneyBegin = +prompt('Nhập số tiền gửi ban đầu: ');
+    let month = +prompt('Nhập số tháng gửi tiết kiệm: ');
+    let interestRate = +prompt('Nhập lãi suất: ');
+    let lai;
+    let result;
+    if (moneyBegin > 0 && month > 1) {
+        result = moneyBegin * Math.pow(1 + (interestRate / 100), (month / 12));
+        lai = result - moneyBegin;
+    } else {
+        alert('Số tiền không hợp lệ ');
+    }
 
-
+    document.write('Số tiền lãi nhận được: ' + lai);
 </script>
 </body>
 </html>

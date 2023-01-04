@@ -6,32 +6,29 @@
 </head>
 <body>
 <script>
-    let n = +prompt('Nhập số n: ');
-    let e = 1;
-    let result = '';
-
-    function soNguyenTo(k) {
-        let kiemTra = true;
-        if (k < 2) {
-            kiemTra = false;
-        } else {
-            for (let i = 2; i <= k / 2; i++) {
-                if (k % i == 0) {
-                    kiemTra = false;
-                    break;
-                }
+    let n = +prompt('Nhập n số đầu tiên : ');
+    let number = 2;
+    let count = 0;
+    if (n < 2) {
+        document.write("không phải")
+    }
+    if (number == 2 || number == 3) {
+        document.writeln(number)
+    }
+    for (let i = 2; i <= n;) {
+        for (let j = 2; j <= Math.sqrt(number); j++) {
+            if (number % j == 0) {
+                count = 0;
+                break;
             }
-            return kiemTra;
         }
-    }
-
-    for (let i = 1; e <= n; i++) {
-        if (soNguyenTo(i)) {
-            result += ' ' + i.toString();
-            e += 1;
+        if (count != 0) {
+            document.writeln(number);
+            i++;
         }
+        count = 1;
+        number++;
     }
-    document.write(result);
 </script>
 
 </body>
